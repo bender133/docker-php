@@ -1,0 +1,14 @@
+framework:
+    messenger:
+        # Uncomment this (and the failed transport below) to send failed messages to this transport for later handling.
+        # failure_transport: failed
+
+        transports:
+            # https://symfony.com/doc/current/messenger.html#redis-transport
+            async: redis://redis:6379/messages
+            # failed: 'doctrine://default?queue_name=failed'
+
+        routing:
+            # Route your messages to the transports
+            # 'App\Message\YourMessage': async
+
